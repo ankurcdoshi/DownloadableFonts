@@ -10,7 +10,7 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    private const val TAG = MainActivity::class.simpleName
+    private val TAG = MainActivity::class.simpleName
 
     private lateinit var mHandler: Handler
 
@@ -30,8 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initializeSeekBars() {
         mWidthSeekBar = findViewById<SeekBar>(R.id.seek_bar_width)
-        val widthValue = (100 * WIDTH_DEFAULT / WIDTH_MAX)
-        Log.d(TAG, "width is $widthValue")
+        val widthValue = (100 * WIDTH_DEFAULT.toFloat() / WIDTH_MAX.toFloat()).toInt()
         mWidthSeekBar.progress = widthValue
 
         val widthTextView = findViewById<TextView>(R.id.textview_width)
