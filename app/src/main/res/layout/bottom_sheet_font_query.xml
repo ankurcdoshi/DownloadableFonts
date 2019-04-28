@@ -53,9 +53,10 @@
 
                     <AutoCompleteTextView
                         android:id="@+id/auto_complete_family_name"
-                        android:completionThreshold="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:completionThreshold="1"
+                        android:fontFamily="@font/lobster_two_bold"
                         android:hint="@string/family_name"
                         android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
